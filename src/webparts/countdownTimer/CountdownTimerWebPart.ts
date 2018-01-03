@@ -19,6 +19,7 @@ export interface ICountdownTimerWebPartProps {
   eventdate: string;
   eventname: string;
   paddingsize: string;
+  fontsize: string;
 }
 
 export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountdownTimerWebPartProps> {
@@ -28,7 +29,7 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
         <div class="${ styles.container }">
           <div class="${ styles.row }">
             <div class="${ styles.column }">
-              <div id="${ this.properties.eventname }" class="${ styles.clockdiv }">
+              <div id="${ this.properties.eventname }" style="font-size: ${ this.properties.fontsize }px;" class="${ styles.clockdiv }">
                 <div style="padding: ${ this.properties.paddingsize }px">
                   <span class="days"></span>
                   <div class="${ styles.smalltext }">Days</div>
@@ -125,10 +126,16 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
               groupName: "Appearence",
               groupFields: [
                 PropertyPaneSlider("paddingsize", {
-                  label: "Size",
+                  label: "Outside Padding",
                   min: 0,
                   max: 10,
                   showValue:true
+                }),
+                PropertyPaneSlider("fontsize", {
+                  label: "Number Font Size",
+                  min: 10,
+                  max: 30,
+                  showValue: true
                 })
               ]
             }

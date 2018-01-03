@@ -15,6 +15,7 @@
     "title": { "default": "Countdown Timer" },
     "description": { "default": "a simple countdown timer" },
     "officeFabricIconFontName": "Page",
+    "iconImageUrl": "./assets/timer-icon.png",
     "properties": {
       "description": "Countdown Timer",
       "eventdate": "01/01/2026",

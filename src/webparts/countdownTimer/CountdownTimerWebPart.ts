@@ -5,7 +5,8 @@ import {
   PropertyPaneTextField,
   PropertyPaneCheckbox,
   PropertyPaneDropdown,
-  PropertyPaneButton
+  PropertyPaneButton,
+  PropertyPaneSlider
 } from "@microsoft/sp-webpart-base";
 import { escape } from "@microsoft/sp-lodash-subset";
 import * as $ from "jquery";
@@ -18,6 +19,7 @@ export interface ICountdownTimerWebPartProps {
   description: string;
   eventdate: string;
   eventname: string;
+  paddingsize: string;
 }
 
 export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountdownTimerWebPartProps> {
@@ -28,19 +30,19 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
           <div class="${ styles.row }">
             <div class="${ styles.column }">
               <div id="${ this.properties.eventname }" class="${ styles.clockdiv }">
-                <div>
+                <div style="padding: ${ this.properties.paddingsize }px">
                   <span class="days"></span>
                   <div class="${ styles.smalltext }">Days</div>
                 </div>
-                <div>
+                <div style="padding: ${ this.properties.paddingsize }px">
                   <span class="hours"></span>
                   <div class="${ styles.smalltext }">Hours</div>
                 </div>
-                <div>
+                <div style="padding: ${ this.properties.paddingsize }px">
                   <span class="minutes"></span>
                   <div class="${ styles.smalltext }">Minutes</div>
                 </div>
-                <div>
+                <div style="padding: ${ this.properties.paddingsize }px">
                   <span class="seconds"></span>
                   <div class="${ styles.smalltext }">Seconds</div>
                 </div>
@@ -117,6 +119,17 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
                 }),
                 PropertyPaneTextField("description", {
                   label: "Event Description"
+                })
+              ]
+            },
+            {
+              groupName: "Appearence",
+              groupFields: [
+                PropertyPaneSlider("paddingsize", {
+                  label: "Size",
+                  min: 0,
+                  max: 10,
+                  showValue:true
                 })
               ]
             }

@@ -15,7 +15,7 @@
     "title": { "default": "Countdown Timer" },
     "description": { "default": "a simple countdown timer" },
     "officeFabricIconFontName": "Page",
-    "iconImageUrl": "./assets/timer-icon.png",
+    "iconImageUrl": "https://tampageneral.sharepoint.com/sites/TGHPortal/WebPartIcons/timer-icon.png?csf=1&e=3e5c75f6a4b4437c89f5c600ed6fc08b",
     "properties": {
       "description": "Countdown Timer",
       "eventdate": "01/01/2026",

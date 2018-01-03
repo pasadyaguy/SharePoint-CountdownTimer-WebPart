@@ -4,13 +4,13 @@
   .container {
     max-width: 700px;
     margin: 0px auto;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
   }
 
   .row {
     @include ms-Grid-row;
     @include ms-fontColor-white;
-    background-color: $ms-color-themeDark;
     padding: 20px;
   }
 
@@ -24,17 +24,17 @@
 
   .title {
     @include ms-font-xl;
-    @include ms-fontColor-white;
+    @include ms-fontColor-black;
   }
 
   .subTitle {
     @include ms-font-l;
-    @include ms-fontColor-white;
+    @include ms-fontColor-black;
   }
 
   .description {
     @include ms-font-l;
-    @include ms-fontColor-white;
+    @include ms-fontColor-black;
   }
 
   .button {
@@ -70,5 +70,48 @@
       vertical-align: top;
       display: inline-block;
     }
+  }
+
+  // Countdown specific
+  .body{
+    text-align: center;
+    background: #00ECB9;
+    font-family: sans-serif;
+    font-weight: 100;
+  }
+
+  .h1{
+    color: #396;
+    font-weight: 100;
+    font-size: 40px;
+    margin: 40px 0px 20px;
+  }
+
+  .clockdiv{
+      font-family: sans-serif;
+      color: #fff;
+      display: inline-block;
+      font-weight: 100;
+      text-align: center;
+      font-size: 30px;
+  }
+
+  .clockdiv > div{
+      padding: 10px;
+      border-radius: 3px;
+      background: #00BF96;
+      display: inline-block;
+  }
+
+  .clockdiv div > span{
+      padding: 15px;
+      border-radius: 3px;
+      background: #00816A;
+      display: inline-block;
+  }
+
+  .smalltext{
+      padding-top: 5px;
+      font-size: 16px;
   }
 }

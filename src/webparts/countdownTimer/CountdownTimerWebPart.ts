@@ -10,7 +10,6 @@ import {
 } from "@microsoft/sp-webpart-base";
 import { escape } from "@microsoft/sp-lodash-subset";
 import * as $ from "jquery";
-require("./countdown.js");
 
 import styles from "./CountdownTimerWebPart.module.scss";
 import * as strings from "CountdownTimerWebPartStrings";

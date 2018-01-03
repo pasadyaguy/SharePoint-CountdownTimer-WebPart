@@ -20,6 +20,7 @@ export interface ICountdownTimerWebPartProps {
   eventname: string;
   paddingsize: string;
   fontsize: string;
+  backgroundcolor: string;
 }
 
 export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountdownTimerWebPartProps> {
@@ -29,7 +30,9 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
         <div class="${ styles.container }">
           <div class="${ styles.row }">
             <div class="${ styles.column }">
-              <div id="${ this.properties.eventname }" style="font-size: ${ this.properties.fontsize }px;" class="${ styles.clockdiv }">
+              <div id="${ this.properties.eventname }"
+                    style="font-size: ${ this.properties.fontsize }px;
+                    background-color: ${ this.properties.backgroundcolor };" class="${ styles.clockdiv }">
                 <div style="padding: ${ this.properties.paddingsize }px">
                   <span class="days"></span>
                   <div class="${ styles.smalltext }">Days</div>
@@ -136,6 +139,9 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
                   min: 10,
                   max: 30,
                   showValue: true
+                }),
+                PropertyPaneTextField("backgroundcolor", {
+                  label: "Background Color"
                 })
               ]
             }

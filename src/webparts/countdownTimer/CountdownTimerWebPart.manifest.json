@@ -19,7 +19,10 @@
     "properties": {
       "description": "Countdown Timer",
       "eventdate": "01/01/2026",
-      "eventname": "Countdown1"
+      "eventname": "Countdown1",
+      "paddingsize": "5",
+      "fontsize": "30",
+      "backgroundcolor": "#00529c"
     }
   }]
 }

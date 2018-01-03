@@ -27,25 +27,25 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
         <div class="${ styles.container }">
           <div class="${ styles.row }">
             <div class="${ styles.column }">
-            <div id="${ this.properties.eventname }" class="${ styles.clockdiv }">
-              <div>
-                <span class="days"></span>
-                <div class="${ styles.smalltext }">Days</div>
+              <div id="${ this.properties.eventname }" class="${ styles.clockdiv }">
+                <div>
+                  <span class="days"></span>
+                  <div class="${ styles.smalltext }">Days</div>
+                </div>
+                <div>
+                  <span class="hours"></span>
+                  <div class="${ styles.smalltext }">Hours</div>
+                </div>
+                <div>
+                  <span class="minutes"></span>
+                  <div class="${ styles.smalltext }">Minutes</div>
+                </div>
+                <div>
+                  <span class="seconds"></span>
+                  <div class="${ styles.smalltext }">Seconds</div>
+                </div>
               </div>
-              <div>
-                <span class="hours"></span>
-                <div class="${ styles.smalltext }">Hours</div>
-              </div>
-              <div>
-                <span class="minutes"></span>
-                <div class="${ styles.smalltext }">Minutes</div>
-              </div>
-              <div>
-                <span class="seconds"></span>
-                <div class="${ styles.smalltext }">Seconds</div>
-              </div>
-            </div>
-              <p class="${ styles.description }">${escape(this.properties.description)}</p>
+              <div class="${ styles.description }">${ escape(this.properties.description) }</div>
             </div>
           </div>
         </div>

@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.0",
+    "libraryName": "countdowntimer-webpart",
+    "libraryId": "6a772779-c0ac-4baf-b63d-aa8b8ea01299",
+    "environment": "spo"
+  }
+}

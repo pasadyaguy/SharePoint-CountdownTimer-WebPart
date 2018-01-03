@@ -1,0 +1,12 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "countdowntimer-webpart-client-side-solution",
+    "id": "6a772779-c0ac-4baf-b63d-aa8b8ea01299",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/countdowntimer-webpart.sppkg"
+  }
+}

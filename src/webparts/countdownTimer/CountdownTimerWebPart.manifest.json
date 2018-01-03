@@ -17,7 +17,8 @@
     "officeFabricIconFontName": "Page",
     "properties": {
       "description": "Countdown Timer",
-      "eventdate": "01/01/2026"
+      "eventdate": "01/01/2026",
+      "eventname": "Countdown1"
     }
   }]
 }

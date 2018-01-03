@@ -17,6 +17,7 @@ import * as strings from "CountdownTimerWebPartStrings";
 export interface ICountdownTimerWebPartProps {
   description: string;
   eventdate: string;
+  eventname: string;
 }
 
 export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountdownTimerWebPartProps> {
@@ -26,7 +27,7 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
         <div class="${ styles.container }">
           <div class="${ styles.row }">
             <div class="${ styles.column }">
-            <div id="clockdiv" class="${ styles.clockdiv }">
+            <div id="${ this.properties.eventname }" class="${ styles.clockdiv }">
               <div>
                 <span class="days"></span>
                 <div class="${ styles.smalltext }">Days</div>
@@ -54,7 +55,7 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
   }
 
   protected startCountdown(): any {
-    this.initializeClock("clockdiv", this.properties.eventdate);
+    this.initializeClock(this.properties.eventname, this.properties.eventdate);
   }
 
   protected initializeClock(id: string, endtime: string): any {
@@ -108,6 +109,9 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
             {
               groupName: strings.BasicGroupName,
               groupFields: [
+                PropertyPaneTextField("eventname", {
+                  label: "Event Name"
+                }),
                 PropertyPaneTextField("eventdate", {
                   label: "Event Date"
                 }),

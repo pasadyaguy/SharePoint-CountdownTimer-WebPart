@@ -3,7 +3,7 @@
   "solution": {
     "name": "Countdown Timer",
     "id": "6a772779-c0ac-4baf-b63d-aa8b8ea01299",
-    "version": "1.0.0.2",
+    "version": "1.0.3",
     "includeClientSideAssets": true
   },
   "paths": {

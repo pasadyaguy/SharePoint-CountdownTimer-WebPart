@@ -1,16 +1,19 @@
-import { Version } from '@microsoft/sp-core-library';
+import { Version } from "@microsoft/sp-core-library";
 import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,
-  PropertyPaneTextField
-} from '@microsoft/sp-webpart-base';
-import { escape } from '@microsoft/sp-lodash-subset';
+  PropertyPaneTextField,
+  PropertyPaneCheckbox,
+  PropertyPaneDropdown
+} from "@microsoft/sp-webpart-base";
+import { escape } from "@microsoft/sp-lodash-subset";
 
-import styles from './CountdownTimerWebPart.module.scss';
-import * as strings from 'CountdownTimerWebPartStrings';
+import styles from "./CountdownTimerWebPart.module.scss";
+import * as strings from "CountdownTimerWebPartStrings";
 
 export interface ICountdownTimerWebPartProps {
   description: string;
+  eventdate: string;
 }
 
 export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountdownTimerWebPartProps> {
@@ -34,7 +37,7 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
   }
 
   protected get dataVersion(): Version {
-    return Version.parse('1.0');
+    return Version.parse("1.0");
   }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -48,8 +51,11 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
+                PropertyPaneTextField("eventdate", {
+                  label: "Event Date"
+                }),
+                PropertyPaneTextField("description", {
+                  label: "Event Description"
                 })
               ]
             }

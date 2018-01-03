@@ -67,7 +67,7 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
     let minutesSpan: Element = clock.querySelector(".minutes");
     let secondsSpan: Element = clock.querySelector(".seconds");
 
-    function getTimeRemaining(endtime: any): any {
+    function getTimeRemaining(): any {
       let now: any = new Date();
       let t: any = Date.parse(endtime) - now;
       let seconds: number = Math.floor((t / 1000) % 60);
@@ -84,7 +84,7 @@ export default class CountdownTimerWebPart extends BaseClientSideWebPart<ICountd
     }
 
     function updateClock(): any {
-      let t: any = getTimeRemaining(endtime);
+      let t: any = getTimeRemaining();
 
       daysSpan.innerHTML = t.days;
       hoursSpan.innerHTML = ("0" + t.hours).slice(-2);

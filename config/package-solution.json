@@ -1,9 +1,9 @@
 {
   "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "Countdown Timer",
+    "name": "Event Countdown",
     "id": "6a772779-c0ac-4baf-b63d-aa8b8ea01299",
-    "version": "1.0.0.4",
+    "version": "1.0.0.5",
     "includeClientSideAssets": true
   },
   "paths": {
